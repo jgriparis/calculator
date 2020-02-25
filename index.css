@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap");
+html {
+  --defaultTeal: #64A0A0;
+  --secondaryTeal: #64A0A0;
+  --activeTeal: #40CACA;
+}
+
+.calculator {
+  min-width: 400px;
+}
+
+.output {
+  padding: 10px;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  overflow-x: scroll;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.output::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.output {
+  scrollbar-width: thin;
+  scrollbar-color: var(--defaultTeal) var(--activeTeal);
+}
+
+.output::-webkit-scrollbar-thumb {
+  background-color: var(--activeTeal);
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+  font-family: 'Orbitron';
+}
+
+.calculator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: .3rem;
+      grid-template-areas: "outputScreen outputScreen outputScreen outputScreen" "clear clear delete divide" "seven eight nine multiply" "four five six minus" "one two three plus" "zero zero zero equal";
+}
+
+.outputScreen {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: outputScreen;
+}
+
+.clear {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: clear;
+}
+
+.delete {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: delete;
+}
+
+.divide {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: divide;
+}
+
+.seven {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.eight {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.multiply {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: multiply;
+}
+
+.four {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.five {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.six {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.minus {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+.one {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.two {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.three {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.plus {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+.zero {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: zero;
+}
+
+.equal {
+  -ms-grid-row: 6;
+  -ms-grid-column: 4;
+  grid-area: equal;
+}
+
+button {
+  color: var(--defaultTeal);
+  background-color: #000;
+  border: none;
+  border: 1px solid var(--defaultTeal);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #40CACA;
+  border: 1px solid var(--activeTeal);
+}
+
+button:active {
+  border: 2px solid var(--activeTeal);
+}
+
+.outputScreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  border: 1px solid var(--defaultTeal);
+  color: #fff;
+}
+/*# sourceMappingURL=index.css.map */

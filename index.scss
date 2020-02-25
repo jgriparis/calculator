@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap');
+
+html {
+  --defaultTeal: #64A0A0;
+  --secondaryTeal: #64A0A0;
+  --activeTeal: #40CACA;
+}
+
+.calculator {
+  min-width:400px;
+}
+
+.output {
+  padding:10px;
+  margin:0;
+  font-size:1.5rem;
+  line-height:2;
+  overflow-x: scroll;
+    -moz-box-sizing : border-box;
+    box-sizing      : border-box;
+}
+
+.output::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.output {
+  
+  scrollbar-width: thin;
+  scrollbar-color: var(--defaultTeal) var(--activeTeal);
+}
+
+.output::-webkit-scrollbar-thumb {
+  background-color: var(--activeTeal) ;
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+
+body {
+  display:flex;
+  align-content:center;
+  justify-content:center;
+  background-color:black;
+  font-family: 'Orbitron' ;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows   : 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap             : .3rem;
+     grid-template-areas:
+    "outputScreen outputScreen outputScreen outputScreen"
+    "clear clear delete divide"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero zero zero equal";
+}
+
+.outputScreen {
+  grid-area:outputScreen;
+}
+
+.clear {
+  grid-area:clear;
+}
+
+.delete {
+  grid-area:delete;
+}
+
+.divide {
+  grid-area:divide;
+}
+
+.seven {
+  grid-area:seven;
+}
+
+.eight {
+  grid-area:eight;
+}
+
+.nine {
+  grid-area:nine;
+}
+
+.multiply {
+  grid-area:multiply;
+}
+
+.four {
+  grid-area:four;
+}
+
+.five {
+  grid-area:five;
+}
+
+.six {
+  grid-area:six;
+}
+
+.minus {
+  grid-area:minus;
+}
+
+.one {
+  grid-area:one;
+}
+
+.two {
+  grid-area:two;
+}
+
+.three {
+  grid-area:three;
+}
+
+.plus {
+  grid-area:plus;
+}
+
+.zero {
+  grid-area:zero;
+}
+
+.equal {
+  grid-area:equal;
+}
+
+button {
+  color: var(--defaultTeal);
+  background-color:#000;
+  border:none;
+  border: 1px solid var(--defaultTeal);
+  font-size:1.5rem;
+  cursor:pointer;
+  &:hover {
+    color: #40CACA;
+    border: 1px solid var(--activeTeal);
+  }
+  &:active {
+    border:2px solid var(--activeTeal);
+  }
+  
+}
+
+.outputScreen {
+  display:flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  width:100%;
+  border: 1px solid var(--defaultTeal);
+  color:#fff;
+}
+
